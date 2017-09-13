@@ -1,0 +1,43 @@
+<!--auth-->
+	 <div id="authForm" style="text-align: center;" class="frame_auth">
+			<div id="authWin" class="divMenu radiusBorder_ pad10" style="position: relative; background: rgb(192, 192, 192); border: 3px solid #000000; width: 150; height: 80; margin: auto auto ;">
+				<div>
+				
+				
+					<div class="wsize100pt"><p class="title">Введите пароль</p></div>
+					<div>
+						<input type="password" id="passwrd" name="pass" class="h29 wsize90pt mg10">
+					</div>
+					<input type="button" id="confirmAuthBtn" name="cancel" value="Отмена" class="standartFont_mini menuButtons wsize45pt" onclick="showMonSettings('close')" style="position: absolute; bottom:10; left: 5; float: left;">
+					<input type="button" id="confirmAuthBtn" name="ok" value="Вход" class="standartFont_mini menuButtons wsize45pt" onclick="FramesCheckPass()" style="position: absolute; bottom:10; right: 5; float: right;">
+					
+				 			
+				</div>
+			</div>
+			
+			<!-- Alert window -->
+<div id="throw_alert" class="err_win" style="position: absolute; visibility: hidden; z-index: 1001;">
+	<div id="bordertha" class=" radiusBorder_" style=" background:#e4e5e4; width:352;  color: black; padding: 3px;">
+		<div class="pad20">
+			<p class="title" id="alert_message">Антенный тюнер не подключен или неисправен</p>
+		</div>
+		<button id="close_alert" onclick="showAlert('hide')" class="alarm wsize100pt">ЗАКРЫТЬ</button>
+	</div>
+</div>
+			
+<script type="text/javascript"> 
+if ($.browser.msie8 || $.browser.msie9) {
+	$('#authWin').css('height', '105');
+	//alert($.browser);
+}
+
+$('#passwrd').keydown(function(event){
+	if(event.keyCode == 13) {
+		//MessageBox('Enter pressed!');
+		FramesCheckPass();
+	}
+});
+
+</script>
+			
+<!--auth-->

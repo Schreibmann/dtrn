@@ -1,0 +1,79 @@
+
+<div style="position:absolute; top:5px; left:5px;  height: 335px; ">
+	<iframe  id = "iframe1" name="iframe1" src = "index.php"  scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:5px; left:530px;  height: 335px;">
+	<iframe  id = "iframe2" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute;top:5px; left:1055px;  height: 335px;">
+	<iframe   id = "iframe3" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:5px; left:1580px;  height: 335px; ">
+	<iframe   id = "iframe4" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+
+<div style="position:absolute; top:345px; left:5px;  height: 335px; ">
+	<iframe   id = "iframe5" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:345px; left:530px;  height: 335px;">
+	<iframe   id = "iframe6" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute;top:345px; left:1055px;  height: 335px;">
+	<iframe   id = "iframe7" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:345px; left:1580px;  height: 335px; ">
+	<iframe  id = "iframe8" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+
+<div style="position:absolute; top:685px; left:5px;  height: 335px; ">
+	<iframe   id = "iframe9" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:685px; left:530px;  height: 335px;">
+	<iframe   id = "iframe10" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute;top:685px; left:1055px;  height: 335px;">
+	<iframe  id = "iframe11" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+<div style="position:absolute; top:685px; left:1580px;  height: 335px; ">
+	<iframe   id = "iframe12" name="iframe1"   scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+
+<div style="position:absolute; top:1025px; visibility:hidden" id="settingsBtnDiv" class="wsize100pt" >
+<button id="mon_settings" onclick="FramesNeedPassCheck()" class="LAlign ">Настройки</button>
+</div>
+
+<script type="text/javascript">
+	
+	set_URL();
+	persent = getCookie("prs");
+	
+	$('iframe[name=iframe1]').each(function(){
+	
+		$(this).addClass('frm');							
+		
+	}); 
+	
+	$("#wrap").children("div").each(function(){
+	
+									$(this).addClass('z' + persent.toString());
+									var left = Math.round($(this).offset().left/100*persent);
+									var top =  Math.round($(this).offset().top/100*persent);
+									$(this).css('left', left.toString() + "px");
+									$(this).css('top', top.toString() + "px");
+									if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {$(this).css('zoom','1');}
+									if (navigator.userAgent.toLowerCase().indexOf('safari') > -1) {$(this).css('zoom','1');}
+									});
+									
+
+	
+	var tagList = document.getElementsByName('iframe1');
+	SetttingsBtnShowTimeout = 0;
+	
+	for (var i = 0; i < tagList.length; i++)
+	{	
+		if ( tagList[i].src.indexOf('empty.htm') == -1 ) 	{ SetttingsBtnShowTimeout++ } 
+	}
+	setTimeout('showSettingsBtn()',(SetttingsBtnShowTimeout*700 + 500));
+
+
+</script>

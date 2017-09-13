@@ -1,0 +1,1553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title></title> 
+
+<script type="text/javascript" src="/js/j182.js"> </script>
+
+<script type="text/javascript" src="/js/scripts.js"> </script>
+<script type="text/javascript" src="/js/ajaxupload.js"> </script>
+
+<link rel="stylesheet" media="screen" href="/css/allcss.css" type="text/css" charset="utf-8">
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link type="image/x-icon" rel="icon" href="/favicon.ico">
+<link type="image/x-icon" rel="shortcut icon" href="/favicon.ico">
+
+
+
+<style></style></head>
+
+<body onload ="requestEnv()" >
+
+<!--CheckBox-->
+<div id="checkboxes" class="lAlign" style="position: absolute; z-index: -10000; left: 180px; top: 100px; width: 300px; visibility: hidden;">
+	<div>
+		<input type="checkBox" id="md1On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkBox" id="md2On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md3On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md4On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md5On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md6On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="alarm1On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="alarm2On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+	</div>
+	<div>
+		<input type="checkbox" id="md7On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md8On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md9On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md10On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md11On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md12On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md13On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md14On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md15On" class="mdBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="md16On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md17On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="md18On" class="mdBox" onclick="resumeCheckBox(this.id)" checked="checked">
+	</div>
+	<div>
+		<input type="checkbox" id="pw1On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw2On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw3On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw4On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw5On" class="pwBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="pw6On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+	</div>
+	<div>
+		<input type="checkbox" id="pw7On" class="pwBox" onclick="resumeCheckBox(this.id)">
+		<input type="checkbox" id="pw8On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw9On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw10On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw11On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw12On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw13On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+		<input type="checkbox" id="pw14On" class="pwBox" onclick="resumeCheckBox(this.id)" checked="checked">
+	</div>
+</div>
+<!--CheckBox-->
+
+
+
+<!--MainDiv-->
+<div id="mainPanel" class="radiusBorder " style="position:absolute; left=0; top=0;">
+	 <img id="imgMap" src="img/bckground_uni.gif" border="0" width="515" height="325">
+
+
+
+<!-- Buttons -->
+<div>
+	<div style="position:absolute;top:27; left:10;">
+			<p style="position: absolute; top: -10px; left: 11px;" class="nameBt" id="channel_label">Канал</p>
+			<p style="position: absolute; top: 110px; left: 12px;" class="nameBt" id="shift_label">Сдвиг</p>
+			<img src="img/buttons/channel.gif" width="63" height="116" id="imgChannel" style="position: absolute; top: -10px; left: 0px;  ">
+			<img src="img/buttons/channel.gif" width="63" height="116" id="imgShift" style="position: absolute; top: 111px; left: 0px;  ">
+	</div>
+	
+	<div style="position:absolute;top:-2; left:0; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;"> 
+		<p id="deviceName" class="nameDev" style="text-align:center;width: 515;"></p>
+	</div> 
+	
+	<div id="bL1" style="position: absolute; top: 35px; left: 22px;  " class="hid">
+		<img src="img/buttons/scr1.gif" width="40" height="40" id="imgbL1">
+	</div>                                  
+	<div id="bL2" style="position: absolute; top: 82px; left: 22px;  " class="hid"> 
+		<img src="img/buttons/scr2.gif" width="40" height="40" id="imgbl2">
+	</div>                                  
+	<div id="bL3" style="position: absolute; top: 155px; left: 22px;  " class="hid"> 
+		<img src="img/buttons/scr1.gif" width="40" height="40" id="imgbL3">
+	</div>                                  
+	<div id="bL4" style="position: absolute; top: 202px; left: 22px;  " class="hid"> 
+		<img src="img/buttons/scr2.gif" width="40" height="40" id="imgbL4">
+	</div>                                  
+	<div id="bB1" style="position: absolute; top: 262px; left: 82px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB1">
+	</div>                                  
+	<div id="bB2" style="position: absolute; top: 262px; left: 134px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB2">
+	</div>                                  
+	<div id="bB3" style="position: absolute; top: 262px; left: 186px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB3">
+	</div>                                  
+	<div id="bB4" style="position: absolute; top: 262px; left: 238px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB4">
+	</div>                                  
+	<div id="bB5" style="position: absolute; top: 262px; left: 290px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB5">
+	</div>                                  
+	<div id="bB6" style="position: absolute; top: 262px; left: 342px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB6">
+	</div>                                  
+	<div id="bB7" style="position: absolute; top: 262px; left: 393px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbB7">
+	</div>                                  
+	<div id="bR1" style="position: absolute; top: 28px; left: 460px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbR1">
+	</div>                                  
+	<div id="bR2" style="position: absolute; top: 77px; left: 460px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbR2">
+	</div>                                  
+	<div id="bR3" style="position: absolute; top: 126px; left: 460px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbR3">
+	</div>                                  
+	<div id="bR4" style="position: absolute; top: 175px; left: 460px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbR4"> 
+	</div>
+	<div id="bAlarm" style="position: absolute; top: 262px; left: 22px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbAlarm">
+	</div>
+	<div id="bSettings" style="position: absolute; top: 262px; left: 460px;  " class="hid"> 
+		<img src="img/buttons/sqr.gif" width="40" height="40" id="imgbSettings">
+	</div>
+</div>
+<!-- Buttons -->
+
+<!-- Buttons pressed -->
+<div>
+	<div id="bL1p" style="position:absolute; 		top:35; left:22; 	visibility:hidden;">
+		<img src="img/buttons/scr1-press.gif" width="40" height="40" id="imgbL1p">
+	</div>
+	<div id="bL2p" style="position:absolute; 		top:82; left:22; 	visibility:hidden;">
+		<img src="img/buttons/scr2-press.gif" width="40" height="40" id="imgbl2p">
+	</div>
+	<div id="bL3p" style="position:absolute; 		top:155; left:22; 	visibility:hidden;">
+		<img src="img/buttons/scr1-press.gif" width="40" height="40" id="imgbL3p">
+	</div>
+	<div id="bL4p" style="position:absolute; 		top:202; left:22; 	visibility:hidden;">
+		<img src="img/buttons/scr2-press.gif" width="40" height="40" id="imgbL4p">
+	</div>
+	<div id="bB1p" style="position:absolute; 		top:262; left:82; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB1p">
+	</div>
+	<div id="bB2p" style="position:absolute; 		top:262; left:134; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB2p">
+	</div>
+	<div id="bB3p" style="position:absolute; 		top:262; left:186; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB3p">
+	</div>
+	<div id="bB4p" style="position:absolute; 		top:262; left:238; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB4p">
+	</div>
+	<div id="bB5p" style="position:absolute; 		top:262; left:290; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB5p">
+	</div>
+	<div id="bB6p" style="position:absolute; 		top:262; left:342; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB6p">
+	</div>
+	<div id="bB7p" style="position:absolute; 		top:262; left:393; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbB7p">
+	</div>
+	<div id="bR1p" style="position:absolute; 		top:28; left:460; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbR1p">
+	</div>
+	<div id="bR2p" style="position:absolute; 		top:77; left:460; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbR2p">
+	</div>
+	<div id="bR3p" style="position:absolute; 		top:126; left:460; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbR3p">
+	</div>
+	<div id="bR4p" style="position:absolute; 		top:175; left:460; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbR4p">
+	</div>
+	<div id="bAlarmp" style="position:absolute; 	top:262; left:22; 	visibility:hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbAlarmp">
+	</div>
+	<div id="bSettingsp" style="position: absolute; top: 262px; left: 460px; visibility: hidden;">
+		<img src="img/buttons/sqr-press.gif" width="40" height="40" id="imgbSettingsp">
+	</div>
+</div>
+<!-- Buttons pressed -->
+
+	<!-- PTT button -->
+	<div id="divPTT">
+		<img src="img/buttons/rttRed.gif" width="40" height="10" alt="ЕСТЬ" style="visibility: visible; position: absolute; top: 234px; left: 460px;" id="dPTT_red">
+		<img src="img/buttons/diodGrey.gif" width="40" height="10" alt="НЕТ" style="position: absolute; top: 234px; left: 460px; visibility: hidden;" id="dPTT_off">
+		<p style="position: absolute; top: 246px; left: 460px;" class="nameBt" id="dPTT_name">PTT</p>
+	</div>
+
+<!-- Diods -->
+<div id="diods" style="position: absolute; top: -1px; left: -8px; visibility: hidden;">
+
+	<div id="dB1g" class="diodsGreen" style="position:absolute; top:295; left:95; ">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB1"> 
+	</div>                                                               
+	<div id="dB2g" class="diodsGreen" style="position: absolute; top: 295px; left: 147px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB2">  
+	</div>                                                               
+	<div id="dB3g" class="diodsGreen" style="position: absolute; top: 295px; left: 199px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB3">  
+	</div>                                                               
+	<div id="dB4g" class="diodsGreen" style="position: absolute; top: 295px; left: 251px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB4">  
+	</div>                                                               
+	<div id="dB5g" class="diodsGreen" style="position: absolute; top: 295px; left: 303px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB5">  
+	</div>                                                               
+	<div id="dB6g" class="diodsGreen" style="position: absolute; top: 295px; left: 355px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB6">  
+	</div>                                                               
+	<div id="dB7g" class="diodsGreen" style="position: absolute; top: 295px; left: 407px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdB7">  
+	</div>                                                               
+	<div id="dR1g" class="diodsGreen" style="position: absolute; top: 61px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdR1">  
+	</div>                                                               
+	<div id="dR2g" class="diodsGreen" style="position: absolute; top: 111px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdR2">  
+	</div>                                                               
+	<div id="dR3g" class="diodsGreen" style="position: absolute; top: 160px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdR3">  
+	</div>                                                               
+	<div id="dR4g" class="diodsGreen" style="position: absolute; top: 209px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdR4">
+	</div>
+	<div id="dAlarmg" class="diodsGreen" style="position: absolute; top: 295px; left: 35px; visibility: hidden;">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdAlarm">
+	</div>
+	<div id="dSettingsg" class="diodsGreen" style="position:absolute; top:295; left:475; ">
+		<img src="img/buttons/diodGreen.gif" class="diod" id="imgdSettings">
+	</div>
+	
+
+	<div id="dB1r" class="diodsRed" style="position:absolute; top:295; left:95;  ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB1r"> 
+	</div>                                                             
+	<div id="dB2r" class="diodsRed" style="position:absolute; top:295; left:147; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB2r">  
+	</div>                                                             
+	<div id="dB3r" class="diodsRed" style="position: absolute; top: 295px; left: 199px; visibility: hidden;">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB3r">  
+	</div>                                                             
+	<div id="dB4r" class="diodsRed" style="position:absolute; top:295; left:251; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB4r">  
+	</div>                                                             
+	<div id="dB5r" class="diodsRed" style="position:absolute; top:295; left:303; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB5r">  
+	</div>                                                             
+	<div id="dB6r" class="diodsRed" style="position:absolute; top:295; left:355; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB6r">  
+	</div>                                                             
+	<div id="dB7r" class="diodsRed" style="position:absolute; top:295; left:407; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdB7r">  
+	</div>                                                             
+	<div id="dR1r" class="diodsRed" style="position:absolute; top:61; left:473;  ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdR1r">  
+	</div>                                                             
+	<div id="dR2r" class="diodsRed" style="position:absolute; top:111; left:473; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdR2r">  
+	</div>                                                             
+	<div id="dR3r" class="diodsRed" style="position:absolute; top:160; left:473; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdR3r">  
+	</div>                                                             
+	<div id="dR4r" class="diodsRed" style="position:absolute; top:209; left:473; ">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdR4r">
+	</div>
+	<div id="dAlarmr" class="diodsRed" style="position: absolute; top: 295px; left: 35px; visibility: hidden;">
+		<img src="img/buttons/diodRed.gif" class="diod" id="imgdAlarmr">
+	</div>
+	<div id="dSettingsr" class="diodsRed" style="position:absolute; top:295; left:940; ">
+			<img src="img/buttons/diodRed.gif" class="diod" id="imgdSettingsr">
+	</div>
+	
+	<div id="dB1o" class="diodsOff" style="position: absolute; top: 295px; left: 95px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB1o"> 
+	</div>                                                             
+	<div id="dB2o" class="diodsOff" style="position: absolute; top: 295px; left: 147px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB2o">  
+	</div>                                                             
+	<div id="dB3o" class="diodsOff" style="position: absolute; top: 295px; left: 199px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB3o">  
+	</div>                                                             
+	<div id="dB4o" class="diodsOff" style="position: absolute; top: 295px; left: 251px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB4o">  
+	</div>                                                             
+	<div id="dB5o" class="diodsOff" style="position: absolute; top: 295px; left: 303px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB5o">  
+	</div>                                                             
+	<div id="dB6o" class="diodsOff" style="position: absolute; top: 295px; left: 355px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB6o">  
+	</div>                                                             
+	<div id="dB7o" class="diodsOff" style="position: absolute; top: 295px; left: 407px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdB7o">  
+	</div>                                                             
+	<div id="dR1o" class="diodsOff" style="position: absolute; top: 61px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdR1o">  
+	</div>                                                             
+	<div id="dR2o" class="diodsOff" style="position: absolute; top: 111px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdR2o">  
+	</div>                                                             
+	<div id="dR3o" class="diodsOff" style="position: absolute; top: 160px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdR3o">  
+	</div>                                                             
+	<div id="dR4o" class="diodsOff" style="position: absolute; top: 209px; left: 473px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdR4o">
+	</div>
+	<div id="dAlarmo" class="diodsOff" style="position: absolute; top: 295px; left: 35px; visibility: hidden;">
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdAlarmo">
+	</div>
+	<div id="dAlarmy" class="diodsOff" style="position: absolute; top: 295px; left: 35px; visibility: hidden;">
+		<img src="img/buttons/diodYellow.gif" class="diodO" id="imgdAlarmy">
+	</div>
+	<div id="dSettingso" class="diodsOff" style="position: absolute; top: 295px; left: 473px; visibility: hidden;"> 
+		<img src="img/buttons/diodOff.gif" class="diodO" id="imgdSettingso">
+	</div>
+</div>
+
+
+<script type="text/javascript"> 
+var version = parseInt($.browser.version, 10);
+$.browser.msie8 = $.browser.msie && (version < 10);
+$.browser.msie9 = $.browser.msie && (version == 9);
+$.browser.msie10 = $.browser.msie && (version == 10);
+if ($.browser.msie9) {
+	$('#diods').css('top', '-9');
+} else if ($.browser.msie8) {
+	$('#diods').css('top', '-9');
+}else{
+	$('#diods').css('top', '-1');
+}
+</script>
+
+
+<!-- Diods -->
+
+<!-- Indicators -->
+<div style="text-align: center; top: 0; left: 0;">
+	<div id="iB1" class="hsize30" style="position: absolute; top: 235px; left: 82px; visibility: visible;">
+		<p id="pB1" class="ind3" style="visibility: visible;"></p>
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="nB1" class="nameBt" style="visibility: visible; left: -9;">Мощность</p>
+	</div>
+	<div id="iB2" class="hsize30" style="position: absolute; top: 235px; left: 134px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB2" class="ind3" style="visibility: visible;"></p>
+		<p id="nB2" class="nameBt" style="visibility: visible;">У.М.</p>
+	</div>
+	<div id="iB3" class="hsize30" style="position: absolute; top: 235px; left: 186px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB3" class="ind3" style="visibility: visible;"></p>
+		<p id="nB3" class="nameBt" style="visibility: visible;">ТЮНЕР</p>
+	</div>
+	<div id="iB4" class="hsize30" style="position: absolute; top: 235px; left: 238px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB4" class="ind3" style="visibility: visible;"></p>
+		<p id="nB4" class="nameBt" style="visibility: visible;">АТТ</p>
+	</div>
+	<div id="iB5" class="hsize30" style="position: absolute; top: 235px; left: 290px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB5" class="ind3" style="visibility: visible;"></p>
+		<p id="nB5" class="nameBt" style="visibility: visible;">ФИЛЬТР</p>
+	</div>
+	<div id="iB6" class="hsize30" style="position: absolute; top: 235px; left: 342px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB6" class="ind3" style="visibility: visible;"></p>
+		<p id="nB6" class="nameBt" style="visibility: visible;">Ш/П</p>
+		</div>
+	<div id="iB7" class="hsize30" style="position: absolute; top: 235px; left: 394px; visibility: visible;">
+		<img src="img/buttons/ind.gif" width="40" height="16" class="indBoth">
+		<p id="pB7" class="ind3" style="visibility: visible;"></p>
+		<p id="nB7" class="nameBt" style="visibility: visible;">NB</p>
+	</div>
+	<div id="iTX" class="hsize90" style="position:absolute; top:35; left:134;   ">
+		<p id="pTX" class="ind90px" style="color: gray;"></p>
+	</div>
+	<div id="iSX" class="hsize90" style="position:absolute; top:58; left:134;   ">
+		<p id="pSX" class="ind90px"></p>
+	</div>
+	<div id="iRX" class="hsize90" style="position:absolute; top:80; left:134;  ">
+		<p id="pRX" class="ind90px"></p>
+	</div>
+	<div id="iCH" class="hsize90" style="position:absolute; top:129; left:150;  ">
+		<p id="pCH" class="ind90px"></p>
+	</div>
+	<div id="iSH" class="hsize50" style="position:absolute; top:182; left:135;  ">
+		<p id="pSH" class="ind50px"></p> 
+	</div>
+	<div id="iTXmes" class="hsize50" style="position:absolute; top:46; left:350;  ">
+		<p id="pTXmesure" class="ind40px" style="visibility: visible;">MHZ</p>
+	</div>
+	<div id="iSXmes" class="hsize50" style="position:absolute; top:69; left:350;  ">
+		<p id="pSXmesure" class="ind40px" style="visibility: hidden;">MHZ</p>
+	</div>
+	<div id="iRXmes" class="hsize50" style="position:absolute; top:93; left:350;  ">
+		<p id="pRXmesure" class="ind40px" style="visibility: visible;">MHZ</p>
+	</div>
+	<div id="iSHIFTmes" class="hsize50" style="position:absolute; top:182; left:187;  ">
+		<p id="pSHIFTmesure" class="ind50px">HZ</p>
+	</div>
+	<div id="iAlarm" class="hsize30" style="position: absolute; top: 235px; left: 22px; visibility: visible;">
+		<p id="nAlarm" class="nameBt" style="visibility: visible;">Аварии</p>
+	</div>
+	<div id="iSettings" class="hsize30" style="position: absolute; top: 235px; left: 450px; visibility: visible;">
+		<p id="nSettings" class="nameBt" style="visibility: visible;">Настройки</p>
+	</div>
+</div>
+
+<div id="iPowerMgr" style="position:absolute; top:130 ; left:250; visibility:visible;">
+	<p id="iPowerMgr0" class="ind90px"></p>
+	<p id="iPowerMgr1" class="ind90px" style="position:absolute;top:40;"></p>	
+</div>
+
+<div id="imodulation" style="position:absolute; top: 0; left:0;">
+	<div id="iR1" style="position: absolute; top: 35px; left: 392px; visibility: hidden;">
+		<img src="img/buttons/bR1.gif" width="45" height="25" class="indBotv">
+	</div>
+	<div id="iR2" style="position: absolute; top: 85px; left: 392px; visibility: hidden;">
+		<img src="img/buttons/bR2.gif" width="45" height="25" class="indBotv">
+	</div>
+	<div id="iR3" style="position: absolute; top: 134px; left: 392px; visibility: visible;">
+		<img src="img/buttons/bR3.gif" width="45" height="25" class="indBotv">
+	</div>
+	<div id="iR4" style="position: absolute; top: 183px; left: 392px; visibility: hidden;">
+		<img src="img/buttons/bR4.gif" width="45" height="25" class="indBotv">
+	</div>
+</div>
+<!-- Indicators -->
+
+
+<!-- Bridge -->
+<div>
+	<div id="iB1b" class="hsize30" style="position: absolute; top: 218px; left: 65px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB2b" class="hsize30" style="position: absolute; top: 218px; left: 117px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB3b" class="hsize30" style="position: absolute; top: 218px; left: 169px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB4b" class="hsize30" style="position: absolute; top: 218px; left: 221px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB5b" class="hsize30" style="position: absolute; top: 218px; left: 273px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB6b" class="hsize30" style="position: absolute; top: 218px; left: 325px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+	<div id="iB7b" class="hsize30" style="position: absolute; top: 218px; left: 377px; visibility: visible;">
+		<img src="img/buttons/bridgeV.gif" class="indbridge">
+	</div>
+</div>
+<!-- Bridge -->
+
+</div>
+<!--MainDiv-->
+
+<!-- Alert window -->
+<div id="throw_alert" style="position: absolute; top: 80px; left: 80px; visibility: hidden; z-index: 1001;">
+	<div id="bordertha" class=" radiusBorder_" style=" background:#e4e5e4; width:352;  color: black; padding: 3px;">
+		<div class="pad20">
+			<p class="title" id="alert_message">Антенный тюнер не подключен или неисправен</p>
+		</div>
+		<button id="close_alert" onclick="showAlert('hide')" class="alarm wsize100pt">ЗАКРЫТЬ</button>
+	</div>
+</div>
+
+
+<!-- Menu-->
+<div id="menu" style="position: absolute; top: 0px; left: 0px; visibility: hidden; z-index: 501;">
+	<div id="submenu" class="radiusBorder10   pad0 mg" style=" background:#e4e5e4; width:495px; height: 305px; color: black; padding: 10px;">
+		<div id="submenu1" style="position: absolute; top: 6; left: 5; width: 180; " class="radiusBorder_ pad0 mg">
+			<p class="title">Каналы TW7000</p>
+			<form id="TXRX" method="POST" class="mg standartFont"> 
+				<table class="wsize100pt"><tbody>
+					<tr id="trCH"> <td id="tdCH">
+						<div id="divCH">
+							<div class="standartFont lAlign tlAlign wsize50pt" id="nCH">Номер:</div>
+							<input type="text" id="CH" name="CH" class="standartFont_mini wsize20pt hsize18 ">
+							<input type="button" value="+" class="standartFont_mini menuButtons rAlign" style="padding-left: 4; height:20px; width:20px; font-size: 15px;" id="imgPlus" onclick="SendTwoValToDarton('CH','P')">
+							<input type="button" value="−" class="standartFont_mini menuButtons rAlign" style="padding-left: 3; height:20px; width:20px; font-size: 15px;" id="imgMinus"  onclick="SendTwoValToDarton('CH','M')">
+						</div>
+					</td></tr>
+					<tr><td>
+						<div id="divTX">
+							<div class="standartFont lAlign tlAlign wsize50pt" id="nTX">TX (MГц):</div>
+							<input type="text" id="TX" name="TX" class="standartFont_mini wsize48pt hsize17">
+						</div>
+					</td></tr>
+					<tr><td>
+						<div id="divRX">
+							<div class="standartFont lAlign wsize50pt" id="nRX">RX (МГц):</div>
+							<input type="text" id="RX" name="RX" class="standartFont_mini wsize48pt hsize17">
+						</div>
+					</td></tr>
+					<tr><td>
+						<div id="divMO">
+							<div class="standartFont_mini lAlign wsize50pt">Модуляция:</div>
+							<div>
+								<select id="MO" name="MO" class="editMenuAdm standartFont_mini wsize48pt hsize20">
+									<option value="J3E">J3E</option>
+									<option value="J2B">J2B</option>
+									<option value="R3E">R3E</option>
+									<option value="SSB">SSB</option>
+								</select>
+							</div>
+						</div>
+					</td></tr>
+					<tr><td>
+						<div id="divRO">
+							<div class="standartFont_mini lAlign wsize50pt" id="receiveOnly">Только прием:</div>
+							<div>
+								<select id="RO" name="RO" class="editMenuAdm standartFont_mini wsize48pt hsize20">
+									<option value="OFF">Нет</option>
+									<option value="ON">Да</option>
+								</select>
+							</div>
+						</div>
+					</td></tr>
+					<tr><td>
+						<div id="divBTN">
+							<div class="lAlign wsize45pt mg0">
+								<input type="button" value="Прочитать" class="standartFont_mini menuButtons" style=" width:80px;" id="bsubmenu2" onclick="SendTwoValToDarton('CH','R')">
+							</div>
+							<div class="rAlign wsize45pt mg0">
+								<input type="button" value="Сохранить" class="standartFont_mini menuButtons" style=" width:80px;" id="bsubmenu1" onclick="sentDataFromMenu('TXRX')">
+							</div>
+						</div>
+					</td></tr>
+				</tbody></table>
+			</form>
+		</div>
+	<!-- ************************ -->
+		<div id="submenu3" style="position: absolute; bottom: 7px; left: 6px; width: 180;" class="standartFont radiusBorder_ pad0 mg">
+			<p class="title">Локальное управление</p>
+			<div id="panelLock" class="standartFont_mini">
+				<input type="checkbox" name="bpanelLock" id="bpanelLock" class="standartFont" onclick="pressCheckBox(this.id)" checked="checked">
+				Полная блокировка
+			</div>
+			<div id="freqLock" class="standartFont_mini">
+				<input type="checkbox" name="bfreqLock" id="bfreqLock" class="standartFont_mini" onclick="pressCheckBox(this.id)" checked="checked">
+				Блокировка частоты
+			</div>
+			<div id="Backlight" class="standartFont_mini">
+				<input type="checkbox" name="bBacklight" id="bBacklight" class="standartFont" onclick="pressCheckBox(this.id)" checked="checked">
+				Откл. подсветки
+			</div>	
+			<div id="Speaker" class="standartFont_mini">
+				<input type="checkbox" name="bSpeaker" id="bSpeaker" class="standartFont_mini" onclick="pressCheckBox(this.id)" checked="checked">
+				Откл. динамика
+			</div>	
+		</div>
+		<!-- ************************ -->
+		<div id="submenu2" style="position:absolute; top:5; left:205; width:280" class="standartFont radiusBorder_ mg">
+			<div><p class="title">Передатчик и УМ</p></div>
+			<div id="submenu2_5" class=" radiusBorder_" style="height: 45px; margin-top: 1px; padding-top: 3px;">
+				<table><tbody>
+					<tr>
+						<td rowspan="2">
+							<input type="button" value="Выкл" class="standartFont_mini menuButtons" style=" width:55px; height: 40px; color: gray;" id="btest" onclick="pressButton('bCW')">
+						</td>
+						<td>
+							<p id="pTest" name="pTestOn" class="base " style="width:105px">Тест передачи</p>
+						</td>
+						<td style="width:50"><input name="pPower" type="text" class="standartFont_mini hsize17 wsize65" id="pPower" readonly=""></td><td width="10">
+							<p id="pTest" name="pTestOn" class="base">Вт.</p>
+						</td>
+					</tr>
+					<tr>	
+						<td><p id="nVSWR" name="nVSWR" class="base ">VSWR</p>
+						</td>
+						<td>
+							<input name="pVSWR" type="text" class="standartFont_mini hsize17 wsize65" id="pVSWR" value="NONE" readonly="">
+						</td>		
+						<td width="10"><p id="pTest" name="pTestOn" class="base">Ед.</p>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+			
+			
+			
+			<table><tbody>
+				<tr>
+					<td><input type="button" value="Запись" class="standartFont_mini menuButtons" style=" width:60px;" name="RFTUNE" id="iRFTUNE" onclick="SendValToDarton(this.name)">				</td>
+					<td><p class="base " id="ncountCH">Настройка САУ</p></td>
+					<td><input class="editMenuSmall rAlign" type="text" id="pRFTUNE" name="RFTUNEval" form="formmenu"></td>
+				</tr>
+				
+				<tr>
+					<td><input type="button" value="Запись" class="standartFont_mini menuButtons" style=" width:60px;" name="RL" id="iRL" onclick="SendValToDarton(this.name)">
+					</td><td><p class="base" id="ncountCH">Мощность (Lo)</p>
+						</td><td><input class="editMenuSmall rAlign" type="text" id="pRL" name="RLval" form="formmenu">
+					</td>
+				</tr>
+				
+				<tr>
+					<td><input type="button" value="Запись" class="standartFont_mini menuButtons" style=" width:60px;" name="RM"  id="iRM"  onclick="SendValToDarton(this.name)">
+					</td><td><p class="base" id="ncountCH">Мощность (Mid)</p>
+						</td><td><input class="editMenuSmall rAlign" type="text" id="pRM" name="RMval" form="formmenu">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Запись" class="standartFont_mini menuButtons" style=" width:60px;" name="RH"  id="iRH" onclick="SendValToDarton(this.name)">
+					</td><td><p class="base" id="ncountCH">Мощность (Hi)</p>
+						</td><td><input class="editMenuSmall rAlign" type="text" id="pRH" name="RHval" form="formmenu">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="Запись" class="standartFont_mini menuButtons" style=" width:60px;" name="TimePT"  id="iTimePT" onclick="SendValToDarton(this.name)">
+					</td><td><p class="base" id="ncountCH">Таймер передачи</p>
+						</td><td><input type="text" id="pTimePT" name="pTimePT" class="editMenuSmall wsize45pt  rAlign" form="formmenu">	
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" value="1000А" class="standartFont_mini menuButtons" style=" width:60px;" id="bcountCH" onclick="pressButton('bcountCH')"></td>
+					<td colspan="2"><p class="base" id="ncountCH">Тип  тюнера (RAT 1000A/1000C)</p></td>
+				</tr>
+			</tbody></table>
+			
+		</div>
+		
+		<form id="formmenu" method="POST" action="createfilew.php"></form>	
+		
+		<!-- Buttons bottom -->
+		<div id="divAdministration" style="position: absolute; bottom: 7px; left: 205px;"> 
+		  <input type="button" value="Управление" class="standartFont_mini menuButtons" style=" width:100px;" id="bAdministration"  onclick="BtnDo('Conf')" >
+		</div>
+		
+		<div id="menuokcancel" style="position: absolute; bottom: 7px; right: 20px;" form="formmenu">
+			<input type="button" value="Закрыть" class="standartFont_mini menuButtons" style=" width:80px;" id="bCancelMenu"  onclick="SettingsMenu('hide','')">
+		</div>
+		
+		
+	</div>
+</div>
+
+<script type="text/javascript"> 
+if ($.browser.msie8) {
+	$('#CH').css('width', '35%');
+	$('#RX').css('width', '100%');
+	$('#TX').css('width', '100%');
+	$('#submenu').css('width', '520px');
+	$('#submenu').css('height', '335px');
+	$('#menu').css('left', '0px');
+	$('#menu').css('top', '0px');
+	$('#submenu1').css('left', '10px');
+	$('#submenu2').css('width', '290px');
+	$('#submenu3').css('left', '10px');
+	$('#divAdministration').css('bottom', '-3px');
+	$('#divAdministration').css('left', '205px');
+	$('#menuokcancel').css('bottom', '-1px');
+	$('#menuokcancel').css('right', '15px');
+	$('#imgMinus').css('position', 'relative');
+	$('#imgPlus').css('position', 'relative');
+	$('#imgMinus').css('top', '-19');
+	$('#imgPlus').css('top', '-19');
+	$('#divCH').css('height', '28px');
+	$('#tdCH').css('height', '28px');
+	$('#trCH').css('height', '30px');
+};
+if ($.browser.opera) {
+	$('#imgMinus').css('position', 'relative');
+	$('#imgPlus').css('position', 'relative');
+	$('#imgMinus').css('top', '-19');
+	$('#imgPlus').css('top', '-19');
+	$('#divCH').css('height', '28px');
+	$('#tdCH').css('height', '28px');
+	$('#trCH').css('height', '30px');
+	$('#divAdministration').css('bottom', '0px');
+	/*$('#divLogout').css('bottom', '-2px');*/
+	$('#menuokcancel').css('bottom', '2px'); 
+}
+
+if ($.browser.mozilla) {
+/* подгон под тормозиллу */
+}
+
+</script>
+<!-- Menu-->
+
+<!-- Admin-->
+<div id="Administration" class="standartFont popupwin radiusBorder_" style="position: absolute; width:495px; height: 305px; left: 0px; top: 0px; visibility: hidden; z-index: 510;">
+
+<div class="mg0" style="width:62%; float:left;">
+				
+		<!--Смена  устройства -->
+		<div class="lAlign divM_sm26">
+			<a class=" standartFont">Тип:</a>
+			<select id="DeviceType" name="DeviceType" class="editM_sm">
+			   <option value="Transceiver">Трансивер</option>
+			   <option value="Transmitter">Передатчик</option>
+			   <option value="Receiver">Приемник</option>
+			</select>
+			<select id="PortNum" name="PortNum" class="editM_sm">
+			   <option value="Port1">Порт1</option>
+			   <option value="Port2">Порт2</option>
+			</select>
+		</div>
+		<button class="alarm menuButtons rAlign wsize25pt" type="button" onclick="changeDeviceType()">Изменить</button>
+		
+		<!--Смена имени устройства -->
+		<div class="divM_sm26 lAlign ">
+			<div class="lAlign standartFont">Имя  устройства: <input id="DeviceNameInput" type="text" class="editMenuSmall wsize50pt"></div>
+			
+		</div>
+		<button type="button" onclick="changeDeviceName()" class="alarm menuButtons rAlign wsize25pt">Изменить</button>
+		
+
+
+		<!--Управление J2B -->
+		<div class="divM_sm26 wsize100pt noborder mg lalign" >
+			<!--<p class="pad0"></p>-->
+			<p class="lAlign mg wsize35pt standartfont noborder">J2B коррекция:</p>
+			<select name="j2bCorr" id="j2bCorr" class="editM_sm lAlign wsize39pt">
+			   <option value="0">Автоматически</option>
+			   <option value="1">Включена</option>
+			   <option value="2">Выключена</option>
+			</select>
+			<button class="alarm menuButtons rAlign wsize25pt"  type="button" onclick="SendValueToDarton('j2bCorr',$('#j2bCorr').val());">Изменить</button>
+		</div>
+		
+		
+		<!--Лог -->
+		<div class="divM_sm26 wsize100pt noborder mg lalign">
+			<!--<p class="pad0"></p>-->
+			<p id="log_label" class="lAlign mg wsize9pt standartfont noborder">Лог</p>
+			<select name="log" id="log" class="editM_sm lAlign wsize65pt">
+				<option value="0">Не выводить</option>
+			   <option value="1">stderr-сообщения</option>
+			   <option value="2">Серьёзные ошибки</option>
+			   <option value="3">Сообщения оператору</option>
+			   <option value="4">Ошибки обмена</option>
+			   <option value="5">Предупреждения</option>
+			   <option value="6">Информация</option>
+			   <option value="7">Статистика</option>
+			</select>
+			<button class="alarm menuButtons rAlign wsize25pt" type="button" onclick="SendValueToDarton('LogMode',$('#log').val());">Изменить</button>
+		</div>
+
+		<div class="divM_sm26 wsize48pt lAlign">	<a class=" standartfont">Скачать лог:</a></div>
+		<div class="divM_sm26 wsize48pt rAlign">
+		<a>[</a><a id="log_file_link" >Datron.log</a><a>]&nbsp[</a><a id="bak_file_link">Datron.bak</a><a>]</a>
+		</div>
+		
+		<!--отображение частоты -->
+		<div class="divM_sm26 wsize100pt lAlign pad10top">
+			<div id="dfreqLock" class="font_sm lAlign">
+				<input type="checkbox" name="ShowTwoFreq" id="ShowTwoFreq" class="lAlign" onclick="SendValueToDarton(this.id, !this.checked);" checked="checked">
+				<a>отображение частоты как на радиостанции</a>
+			</div>
+
+		</div>
+
+		
+		<div class="divM_sm26 wsize100pt noborder mg">
+            <p class="standartFont lAlign mg0">Максимальная задержка порта:</p>
+			<input class="standartFont lalign wsize50pt hsize20" type="number" value="" step="" name="maxDelay" id="maxDelay">
+			<p class="standartFont lalign mg0 wsize15pt ">мсек</p>
+			<button class="alarm menuButtons rAlign wsize25pt" type="button" onclick="SendValueToDarton('addTimeout',$('#maxDelay').val());">Изменить</button>
+		</div>
+
+		
+		<div class="divM_sm26 wsize100pt lAlign">
+			<hr>
+			<div class="wsize100pt lAlign">
+				<p class=" mg standartfont" style="" id="refreshFirm">Обновление  ПО:</p>
+			</div>
+			
+			<form id="uploadFirmware" action="uploadFirmware.php" method="post" enctype="multipart/form-data" target="responseUpload" onsubmit="UploadBar('show')" class="mg">
+			
+			<input type="file" name="uploadfile" class="alarm lAlign wsize75pt"> 
+			<input id="uploadButton" type="submit" value="Загрузить" class="alarm menuButtons rAlign wsize25pt" style="visibility: hidden;">
+
+			</form>
+			
+			
+		</div>
+		
+</div>
+
+<div style="width:1px; height:100%; float:left; margin-left:3px; background-color:#666;" ></div>
+
+		
+<div class="mg0" style="width:35%; float:right;">
+
+
+		
+		<!-- -->
+				<div class="divM_sm26 wsize100pt">
+			<p class="pad0 wsize100pt mg noborder" style="line-height: 0;"></p>
+			<form method="POST" id="chpass" class="mg">
+				<p class="lAlign standartFont mg0" id="nrecOnly">Учетные  данные:</p>
+				<select name="role" class="editM_sm rAlign wsize100pt">
+				   <option value="AlarmWin">Аварии</option>
+				   <option value="SettingsWin">Настройка</option>
+				   <option value="ConfWin">Управление</option>
+				</select>
+				<div class="lAlign wsize100pt"><p class="standartFont lAlign mg wsize100pt" id="nrecOnly">Новый пароль:</p>
+				<input type="password" id="newpass" name="newpass" class="standartFont_mini editM_sm rAlign wsize100pt"></div>
+				<div class="lAlign wsize100pt"><p class="standartFont lAlign mg wsize100pt" id="nrecOnly">Подтверждение:</p>
+				<input type="password" id="confirmpass" name="confirmpass" class="standartFont_mini editM_sm rAlign wsize100pt"></div>
+				<div class="lAlign wsize100pt">
+					<button type="button" onclick="changePSWD()" class="alarm  menuButtons rAlign wsize100pt">Изменить</button>
+				</div>
+			</form>
+			
+		</div>
+		<!-- -->
+		
+		<div class="divM_sm26 lAlign wsize100pt">
+		<hr>
+			
+			<button id="restartDevice" onclick="restartDevice(1)" style="position: relative; bottom: 0;" class="alarm menuButtons  lAlign wsize100pt">Перезапустить сервер</button>
+			<button id="showdebuginfo" onclick="pressButton('showDebugInfo')" style="position: relative; bottom: 0;" class="alarm lAlign menuButtons wsize100pt">Служебная информация</button>
+			<button id="showTblBtn" onclick="showTable('show')" style="position: relative; bottom: 0;" class=" menuButtons alarm lAlign wsize100pt">Настройка УМ</button>
+			<button id="closeAdministration" onclick="showAdm('hide')" style="position: relative; bottom: 0;" class=" menuButtons alarm lAlign wsize100pt">Закрыть&nbsp&nbsp&nbsp </button>
+			
+		</div>
+		<iframe id="responseUpload" name="responseUpload" class="divM_sm26 popupwin radiusBorder_" style="position:absolute; bottom: -3px;left:-3; width:300px; height:130px; visibility: hidden;" scrolling="no" allowtransparency=""></iframe>
+		<!-- Загрузка прошивки -->
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript"> 
+if ($.browser.msie8 || $.browser.msie9) {
+	$('#responseUpload').css('height', '160px');
+	$('#Administration').css('width', '520px');
+	$('#Administration').css('height', '335px');
+	$('#Administration').css('left', '0px');
+	$('#Administration').css('top', '0px');
+	$('#newpass').css('width', '45%');
+	$('#confirmpass').css('width', '45%');
+}
+/*
+if ($.browser.msie10) {
+	$('#Administration').css('width', '475px');
+	$('#Administration').css('height', '290px');
+}
+
+if ($.browser.mozilla) {
+ подгон под тормозиллу 
+}*/
+
+
+</script>
+<!-- Admin-->
+
+<!-- UM Table-->
+<div id="UMTable" class="standartFont popupwin radiusBorder_" style="position: absolute; width:495px; height: 305px; left: 0px; top: 0px; visibility: hidden; z-index: 520;">
+
+<div class="wsize100pt">
+		<p class="standartFont_mini lAlign mg0 wsize100pt">Параметры антенны:</p>
+
+        <p class="standartFont_mini lAlign mg0" style="width:10px; line-height: 18px">B=</p>
+		<input class="standartFont_mini lalign wsize20pt hsize20" type="number" step="0.0005" value=""  name="ant_b" id="B">
+        <p class="standartFont_mini lAlign mg0" style="width:40px;  line-height: 18px">дБ/м</p>
+
+        <p class="standartFont_mini lAlign mg0" style="width:10px; line-height: 18px">L=</p>
+		<input class="standartFont_mini lalign wsize20pt hsize20" type="number" step="10" value=""  name="ant_l" id="L">
+        <p class="standartFont_mini lAlign mg0" style="width:25px; line-height: 18px ">м</p>
+
+        <p class="standartFont_mini lAlign mg0" style="width:10px; line-height: 18px">К=</p>
+		<input class="standartFont_mini lalign wsize20pt hsize20" type="number" step="0.01" value=""  name="ant_k" id="K">
+        <p class="standartFont_mini lAlign mg0" style="width:10px; line-height: 18px">дБ</p>
+		
+		<input type="checkBox" id="no_input" class="mdBox" style="visibility: hidden;">
+		
+		</div>
+		
+		<div class="wsize100pt lAlign">
+		<p class="title">Тарировочная таблица усилителя мощности</p>
+		</div>		
+<!-- Table -->
+
+		<table width="100%" class="standartFont_mini" id="TarTable" border="1px" style="empty-cells: show; margin-bottom: 7px;">
+<tr>
+	<td width="4%">N</td>
+	<td width="23%">V1, Вольт</td>
+	<td width="23%">P1, Ватт</td>
+	<td width="23%">V2, Вольт</td>
+	<td width="23%">P2, Ватт</td>
+</tr>
+
+<tr>
+	<td >1</td>
+	<td id="T1_edit1_1"></td>
+	<td id="T1_edit1_2"></td>
+	<td id="T2_edit1_1"></td>
+	<td id="T2_edit1_2"></td>
+</tr>
+
+<tr>
+	<td >2</td>
+	<td id="T1_edit2_1"></td>
+	<td id="T1_edit2_2"></td>
+	<td id="T2_edit2_1"></td>
+	<td id="T2_edit2_2"></td>
+</tr>
+
+<tr>
+	<td >3</td>
+	<td id="T1_edit3_1"></td>
+	<td id="T1_edit3_2"></td>
+	<td id="T2_edit3_1"></td>
+	<td id="T2_edit3_2"></td>
+</tr>
+<tr>
+	<td >4</td>
+	<td id="T1_edit4_1"></td>
+	<td id="T1_edit4_2"></td>
+	<td id="T2_edit4_1"></td>
+	<td id="T2_edit4_2"></td>
+</tr>
+
+<tr>
+	<td >5</td>
+	<td id="T1_edit5_1"></td>
+	<td id="T1_edit5_2"></td>
+	<td id="T2_edit5_1"></td>
+	<td id="T2_edit5_2"></td>
+</tr>
+
+<tr>
+	<td >6</td>
+	<td id="T1_edit6_1"></td>
+	<td id="T1_edit6_2"></td>
+	<td id="T2_edit6_1"></td>
+	<td id="T2_edit6_2"></td>
+</tr>
+<tr>
+	<td >7</td>
+	<td id="T1_edit7_1"></td>
+	<td id="T1_edit7_2"></td>
+	<td id="T2_edit7_1"></td>
+	<td id="T2_edit7_2"></td>
+</tr>
+<tr>
+	<td >8</td>
+	<td id="T1_edit8_1"></td>
+	<td id="T1_edit8_2"></td>
+	<td id="T2_edit8_1"></td>
+	<td id="T2_edit8_2"></td>
+</tr>
+
+<tr>
+	<td >9</td>
+	<td id="T1_edit9_1"></td>
+	<td id="T1_edit9_2"></td>
+	<td id="T2_edit9_1"></td>
+	<td id="T2_edit9_2"></td>
+</tr>
+</table>
+
+		<!-- Table -->
+		
+	<button id="closeTblBtn" onclick="saveTable()" class="alarm lAlign wsize50pt">Сохранить</button>
+	<button id="closeTblBtn" onclick="showTable('hide')" class="alarm lAlign wsize50pt">ЗАКРЫТЬ &nbsp &nbsp &nbsp </button>
+</div>
+
+ <script type="text/javascript"> 
+ 
+if ($.browser.msie8 || $.browser.msie9) {
+	$('#UMTable').css('left', '0');
+	$('#UMTable').css('top', '0');
+	$('#UMTable').css('width', '515px');
+	$('#UMTable').css('height', '330px');
+	$('#UMTable').css('padding-top', '3');
+}
+
+if ($.browser.mozilla) {
+/* подгон под тормозиллу */
+}
+ 
+$(function()	{
+	$('td').click(function()	
+	{
+	
+	if 	(this.parentNode.parentNode.parentNode.id == ("TarTable") && this.id != ('') ) //обрабатываем только нужную таблицу и определенные ячейки в ней
+	{
+		var chk = $("#no_input").prop("checked");
+		if (chk != true)
+		{
+		$("#no_input").attr("checked", "checked");
+
+		var val = $(this).html();	//получаем значение ячейки
+				
+		//формируем код текстового поля
+		var code = '<input class="edit_tbl standartFont_mini" type="text" id="edt" value="'+val+'"/>';
+		
+		
+		
+		//удаляем содержимое ячейки, вставляем в нее сформированное поле
+		
+		$(this).empty().append(code);
+		
+		if ($.browser.msie8) {
+		$('#edt').addClass("edit_tbl_ie");
+		$('#edt').removeClass("edit_tbl");
+		}
+		
+		//устанавливаем фокус на свеженарисованное поле
+		$('#edt').focus();
+		
+		$('#edt').blur(function()	
+		{	//устанавливаем обработчик
+			var val =  $(this).val();	//получаем то, что в поле находится
+			
+			if (val == '') {val = '&nbsp;'}
+			
+			//находим ячейку, опустошаем, вставляем значение из поля
+			$(this).parent().empty().html(val);
+			$("#no_input").removeAttr('checked');
+
+		});
+		}
+	}	
+	
+	});
+		
+});
+
+
+$(window).keydown(function(event){
+	//ловим событие нажатия клавиши
+	if(event.keyCode == 13) {	//если это Enter
+		//MessageBox('Enter pressed!');
+		$('#edt').blur();	//снимаем фокус с полей ввода
+	}
+});
+	
+
+function calculateBLK(id){
+
+	switch (id) 
+	{
+		case "B" :
+		{
+			var B = parseFloat($('#B').val());
+			var L = parseFloat($('#L').val());
+			var val = 2 * B * L;
+			if ( val.toString() == "NaN") {val = ''}
+			//alert(typeof val + val);
+			$('#K').val(val);
+			break;
+			
+		}
+		
+		case "L" :
+		{
+			var B = parseFloat($('#B').val());
+			var L = parseFloat($('#L').val());
+			var val = 2 * B * L;
+			if ( val.toString() == "NaN") {val = ''}
+			$('#K').val(val);
+			break;
+		}
+		
+		case "K" :
+		{
+			var K = parseFloat($('#K').val());
+			var L = parseFloat($('#L').val());
+			var val = K/(2 * L);
+			if ( val.toString() == "NaN") {val = ''}
+			$('#B').val(val);
+			break;
+			
+		}
+	}
+	
+	
+	
+}
+
+document.getElementById('B').onkeypress = function (e)   
+{     
+    
+if(String.fromCharCode(e.which) != ',' && String.fromCharCode(e.which) != '.' && e.which!=190 && e.which!=191  && e.which!=37 && e.which!=39   && e.which!=44 && e.which!=8 && e.which!=0 && (e.which<48 || e.which>57) )    return false
+
+  
+}
+
+$("#B").keyup(function () {calculateBLK("B");})
+
+
+$("#L").keypress(function (e)   
+{     
+    
+if(String.fromCharCode(e.which) != ',' && String.fromCharCode(e.which) != '.' && e.which!=190 && e.which!=191  && e.which!=37 && e.which!=39   && e.which!=44 && e.which!=8 && e.which!=0 && (e.which<48 || e.which>57) )    return false
+
+  
+});
+
+$("#L").keyup(function () {calculateBLK("L");})
+
+
+$("#K").keypress(function (e)   
+{     
+    
+if(String.fromCharCode(e.which) != ',' && String.fromCharCode(e.which) != '.' && e.which!=190 && e.which!=191  && e.which!=37 && e.which!=39   && e.which!=44 && e.which!=8 && e.which!=0 && (e.which<48 || e.which>57) )    return false
+
+  
+});
+
+$("#K").keyup(function () {calculateBLK("K");})
+
+
+/*-----------------------------
+$("#B").keypress(function (e)   
+{     
+if(e.keyCode!=188 && e.keyCode!=190 )   { return false} else {alert(e.keycode);}  
+});
+/*------------------*/ 
+
+$('input').mousedown(function () {
+    if(this.id == "B" || this.id == "L" || this.id == "K") { number_edit_val = this.value; }        
+});
+
+$('input').mouseup(function()
+{
+
+	switch (this.id)
+	{
+		case "B":
+		{
+			if(this.value !== number_edit_val) {
+				calculateBLK("B");
+				number_edit_val = this.value;
+			}  			
+		}
+		case "L":
+		{
+			if(this.value !== number_edit_val) {
+				calculateBLK("L");
+				number_edit_val = this.value;
+			}	
+		}
+		case "K":
+		{
+			if(this.value !== number_edit_val) {
+				calculateBLK("K");
+				number_edit_val = this.value;
+			}
+		}
+	}
+
+});
+
+</script> 
+
+<!-- UM Table-->
+
+<!--BreakDown -->
+<div id="breakdown" class="pad0 mg" style="position: absolute; top: 0px; left: 0px; visibility: hidden; z-index: 501;">
+<div id="breakdownSub" class=" pad0 mg" style="font-size: 15px; font-family: Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif; 
+	text-align:center; background:#e4e5e4; top:0; left:0; width:515; height: 325; color: black; position:absolute;">
+	
+	<div id="subbreakdownState" class="pad10w mg radiusBorder_" style=" position:absolute; top:3; left:5; width:220;">
+		<p class="title">Контроль внутренних модулей</p>
+		<div class="mg10">
+			<label id="md1Lb" for="md1On" class="CheckBoxClick">
+				<p id="md1State" class="mdState" style="color: green;"></p>
+				<p id="md1name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md2Lb" for="md2On" class="CheckBoxClick">
+				<p id="md2State" class="mdState" style="color: green;"></p>
+				<p id="md2name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md3Lb" for="md3On" class="CheckBoxClick">
+				<p id="md3State" class="mdState" style="color: green;"></p>
+				<p id="md3name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md4Lb" for="md4On" class="CheckBoxClick">
+				<p id="md4State" class="mdState" style="color: green;"></p>
+				<p id="md4name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md5Lb" for="md5On" class="CheckBoxClick">
+				<p id="md5State" class="mdState" style="color: green;"></p>
+				<p id="md5name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md6Lb" for="md6On" class="CheckBoxClick">
+				<p id="md6State" class="mdState" style="color: green;"></p>
+				<p id="md6name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md7Lb" for="md7On" class="CheckBoxClick">
+				<p id="md7State" class="mdState"></p>
+				<p id="md7name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md8Lb" for="md8On" class="CheckBoxClick">
+				<p id="md8State" class="mdState"></p>
+				<p id="md8name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md9Lb" for="md9On" class="CheckBoxClick">
+				<p id="md9State" class="mdState" style="color: green;"></p>
+				<p id="md9name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md10Lb" for="md10On" class="CheckBoxClick">
+				<p id="md10State" class="mdState"></p>
+				<p id="md10name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md11Lb" for="md11On" class="CheckBoxClick">
+				<p id="md11State" class="mdState" style="color: green;"></p>
+				<p id="md11name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md12Lb" for="md12On" class="CheckBoxClick">
+				<p id="md12State" class="mdState"></p>
+				<p id="md12name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md13Lb" for="md13On" class="CheckBoxClick">
+				<p id="md13State" class="mdState"></p>
+				<p id="md13name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md14Lb" for="md14On" class="CheckBoxClick">
+				<p id="md14State" class="mdState"></p>
+				<p id="md14name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md15Lb" for="md15On" class="CheckBoxClick">
+				<p id="md15State" class="mdState"></p>
+				<p id="md15name" class="mdName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md16Lb" for="md16On" class="CheckBoxClick">
+				<p id="md16State" class="mdState" style="color: green;"></p>
+				<p id="md16name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md17Lb" for="md17On" class="CheckBoxClick">
+				<p id="md17State" class="mdState" style="color: green;"></p>
+				<p id="md17name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="md18Lb" for="md18On" class="CheckBoxClick">
+				<p id="md18State" class="mdState" style="color: green;"></p>
+				<p id="md18name" class="mdName" style="color: black;"></p>
+			</label>
+		</div>
+	</div>
+
+	<div id="subbreakdownInf" class="radiusBorder_ pad10w mg" style="position:absolute; bottom:5; left:5; width:220;">
+		<p class="title mg0">Версия  ПО</p>
+		<div class="md10 relate tlAlign pad0" >
+			<p id="nWeb" name="pWeb" class="mdName lAlign wsize80pt ">ПО управления TW7000:</p>
+			<p id="pWeb" name="pWeb" class=" wsize10pt version rAlign ">2.19</p>
+		</div>
+		<div class="mg10 relate tlAlign pad0" id="vers_line2">
+			<p id="nProc" name="pProc" class="mdName lAlign wsize80pt ">ЦПУ TW7000:</p>
+			<p id="pProc" name="pProc" class="wsize15pt version rAlign "></p>
+		</div>
+		<div class="mg10 relate tlAlign pad0" id="vers_line3">
+			<p id="nPanel" name="pPanel" class="wsize80pt mdName lAlign ">Панель управления:</p>
+			<p id="pPanel" name="pPanel" class="wsize10pt version rAlign "></p>
+		</div>
+		<div class="mg10 relate tlAlign pad0"id="vers_line4">
+			<p id="nISDN" name="pISDN" class="wsize80pt mdName lAlign">ISDN:</p>
+			<p id="pISDN" name="pISDN" class="wsize15pt version rAlign "></p>
+		</div>
+	</div>
+
+	<!-- PowerAlarm -->
+<div id="subbreakdownPower" class="pad10w mg radiusBorder_" style="position:absolute; top:3; left:260; width:217;">
+		<p class="title">Контрольные точки</p>
+		<div class="mg10">
+			<label id="pw1Lb" for="pw1On" class="CheckBoxClick">
+				<p id="pw1State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw1name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw2Lb" for="pw2On" class="CheckBoxClick">
+				<p id="pw2State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw2name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw3Lb" for="pw3On" class="CheckBoxClick">
+				<p id="pw3State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw3name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw4Lb" for="pw4On" class="CheckBoxClick">
+				<p id="pw4State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw4name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw5Lb" for="pw5On" class="CheckBoxClick">
+				<p id="pw5State" class="pwState"></p>
+				<p id="pw5name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw6Lb" for="pw6On" class="CheckBoxClick">
+				<p id="pw6State" class="pwState"></p>
+				<p id="pw6name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw7Lb" for="pw7On" class="CheckBoxClick">
+				<p id="pw7State" class="pwState"></p>
+				<p id="pw7name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw8Lb" for="pw8On" class="CheckBoxClick">
+				<p id="pw8State" class="pwState"></p>
+				<p id="pw8name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw9Lb" for="pw9On" class="CheckBoxClick">
+				<p id="pw9State" class="pwState"></p>
+			 	<p id="pw9name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw10Lb" for="pw10On" class="CheckBoxClick">
+				<p id="pw10State" class="pwState"></p>
+				<p id="pw10name" class="pwName"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw11Lb" for="pw11On" class="CheckBoxClick">
+				<p id="pw11State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw11name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw12Lb" for="pw12On" class="CheckBoxClick">
+				<p id="pw12State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw12name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw13Lb" for="pw13On" class="CheckBoxClick">
+				<p id="pw13State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw13name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+		<div class="mg10">
+			<label id="pw14Lb" for="pw14On" class="CheckBoxClick">
+				<p id="pw14State" class="pwState" style="color: blue; background-color: transparent;"></p>
+				<p id="pw14name" class="pwName" style="color: black;"></p>
+			</label>
+		</div>
+	</div>
+	
+	<div id="subbreakdownAlarm" class="radiusBorder_  pad10wb mg" style="position:absolute; bottom:65; left:260; width: 217;">
+		<div style="position:relative;">
+			<p class="title">Усилитель  мощности</p>
+		</div>
+		<div  class=" wsize90pt lAlign" id="PwrAlrmSubIE_1">
+			<label id='alarm1Lb' for='alarm1On' class="CheckBoxClick">
+				<p id='alarm1State' class="mdState"></p>
+				<p id='alarm1name' class="mdName"></p>
+			</label>
+		</div>
+		<div  class=" wsize90pt lAlign" id="PwrAlrmSubIE_2">
+			<label id='alarm2Lb' for='alarm2On' class="CheckBoxClick">
+				<p id='alarm2State' class="mdState"></p>
+				<p id='alarm2name' class="mdName"></p>
+			</label>
+		</div>
+		<div  class=" wsize95pt lAlign h25" id="PwrAlrmSubIE_4">
+			<p id='pttName' class="mdName  wsize60pt lAlign" style=" margin-top: 5px;" >Вкл. PTT</p>			
+			<input type="button" id="pttButton" class="rAlign menuButtons alarm" value="Выкл" onClick="pressButton('bCW')" style="width: 45px; height:20px; color: gray;">
+		</div>
+		<div  class=" wsize95pt lAlign h25" id="PwrAlrmSubIE_4">
+			<p id='pwr220Name' class="mdName wsize60pt lAlign" style=" margin-top: 5px;" >Питание 220V</p>	
+			<input type="button" id='pwr220' class="rAlign menuButtons alarm" value="Выкл" onClick="pressButton('b220')" style="width: 45px; height:20px; color: gray;">
+		</div>		
+
+		
+
+	</div>
+
+	<div id="subbreakdownCheck" class="radiusborder_ pad10bwt mg" style="position:absolute; top:270; left: 260; width: 150;">
+		<div class="mg">
+			<p class="title">Период  опроса, мин.</p>
+			
+			<input type="text" id="pCheckPeriod" name="CheckPeriod" onchange="resumeCheckPeriod()" class="standartFont wsize45pt lAlign mg">
+			<input  type="button" value="Сохранить" class="standartFont_mini menuButtons rAlign" name="bCheckPeriod" onclick="changeCheckPeriod()"  style="height:22px;">
+		</div>
+	</div>
+	
+	<div id="subbreakdownAdm" style="position:absolute;  bottom:30; right:12;">
+		<input type="button" value="Изменить" class="standartFont_mini menuButtons" id="AdmAlarmBtn" onclick="BtnDo('AdmAlarm')" style=" width:70px;">
+	</div>
+	<div id="subbreakdownOK" style="position:absolute;  bottom:5; right:12;">
+		<input type="button" value="Закрыть" class="standartFont_mini menuButtons" style=" width:70px;" id="bbreakdownOK" onclick="BreakDownMenu('hide')" >
+	</div>
+		
+	</div>
+</div>
+
+
+<script type="text/javascript"> 
+if ($.browser.msie8) {
+	$('#breakdownSub').css('width', '520');
+	$('#breakdownSub').css('height', '335');
+	$('#breakdownSub').css('top', '0');
+	$('#breakdownSub').css('left', '0');
+	$('#subbreakdownOK').css('bottom', '1px');
+	$('#nWeb').css('width', '76%');
+	$('#vers_line2').css('padding-top', '0');
+	$('#vers_line3').css('padding-top', '0');
+	$('#vers_line4').css('padding-top', '0');
+	$('#subbreakdownPower').css('width', '265');
+	$('#subbreakdownPower').css('left', '230');
+	$('#subbreakdownAlarm').css('bottom', '65');
+	$('#subbreakdownAdm').css('bottom', '27');
+	$('#subbreakdownAlarm').css('width', '265');
+	$('#subbreakdownAlarm').css('left', '230');
+	$('#PwrAlrmSubIE_1').css('margin-top', '0');
+	$('#PwrAlrmSubIE_1').css('margin-bottom', '0');
+	$('#PwrAlrmSubIE_2').css('margin-top', '0');
+	$('#PwrAlrmSubIE_2').css('margin-bottom', '0');
+	$('#PwrAlrmSubIE_3').css('margin-top', '0');
+	$('#PwrAlrmSubIE_3').css('margin-bottom', '0');
+	$('#PwrAlrmSubIE_4').css('margin-top', '0');
+	$('#PwrAlrmSubIE_4').css('margin-bottom', '0');
+	$('#subbreakdownCheck').css('top', '270');
+	$('#subbreakdownCheck').css('left', '230');
+}
+
+if ($.browser.mozilla) {
+/*$('#breakdownSub').css('height', '295px');
+$('#breakdownSub').css('top', '5px');
+$('#breakdownSub').css('width', '485px');
+$('#breakdownSub').css('left', '5px');*/
+
+}
+</script>
+<!-- BreakDown-->
+
+<!--ProgressBar-->
+<div id="progressBar" class="bckGround radiusBorder hid">
+	<div style="position:absolute; top:150; left:50;">
+		<div class="progress">
+			<div id="barStick" class="bar"></div>
+			<p id="barValue" class="value ind50px"></p>
+		</div>
+	</div>
+	<div style="position:absolute; top:175; left:50; width:420;">
+			<p class="indd50px">Идет перезагрузка</p>
+	</div>
+</div>
+<!--ProgressBar-->
+
+
+<!--auth-->
+	 <div id="authForm" style="text-align: center; position: absolute; top: 120px; left: 175px; visibility: hidden; z-index: 1001;">
+			<div id="authWin" class="divMenu radiusBorder_ pad10" style="position: relative; background: rgb(192, 192, 192); border: 3px solid #000000; width: 150; height: 80; margin: auto auto ;">
+				<div>
+				
+				
+					<div class="wsize100pt"><p class="title">Введите пароль</p></div>
+					<div>
+						<input type="password" id="passwrd" name="pass" class="h29 wsize90pt mg10">
+					</div>
+					<input type="button" id="confirmAuthBtn" name="cancel" value="Отмена" class="standartFont_mini menuButtons wsize45pt" onclick="CloseAuth()" style="position: absolute; bottom:10; left: 5; float: left;">
+					<input type="button" id="confirmAuthBtn" name="ok" value="Вход" class="standartFont_mini menuButtons wsize45pt" onclick="CheckPass()" style="position: absolute; bottom:10; right: 5; float: right;">
+					
+				 			
+				</div>
+			</div>
+<!--auth-->	 
+<script type="text/javascript"> 
+if ($.browser.msie8 || $.browser.msie9) {
+	$('#authWin').removeClass("radiusBorder_");
+	$('#authWin').css('height', '105');
+	$('#authWin').addClass("radiusBorder_");
+}
+
+$('#passwrd').keydown(function(event){
+	if(event.keyCode == 13) {
+		//MessageBox('Enter pressed!');
+		CheckPass();
+	}
+});
+
+</script>
+
+
+
+</div>
+<!--auth-->	 
+
+
+<script type="text/javascript">
+    var perm="Control";
+	takeAuth(perm);
+	window.onbeforeunload = function () {
+	clearAll();
+}
+</script>
+
+</body>
+</html>

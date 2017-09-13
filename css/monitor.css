@@ -1,0 +1,42 @@
+
+.wsize24pt {width: 24%;}
+.wsize9pt {width: 9%;}
+.wsize15pt {width: 15%;}
+.wsize20pt {width: 20%;}
+.wsize25pt {width: 25%;}
+.wsize30pt {width: 30%;}
+.wsize31pt {width: 31%;}
+.wsize32pt {width: 32%;}
+.wsize35pt {width: 35%;}
+.wsize40pt {width: 40%;}
+.wsize45pt {width: 45%;}
+.wsize48pt {width: 48%;}
+.wsize50pt {width: 50%;}
+.wsize55pt {width: 55%;}
+.wsize60pt {width: 60%;}
+.wsize65pt {width: 65%;}
+.wsize70pt {width: 70%;}
+.wsize85pt {width: 85%;}
+.wsize90pt {width: 90%;}
+.wsize95pt {width: 95%;}
+.wsize100pt {width: 100%;}
+
+.frame_auth {
+    position: absolute; /* Абсолютное позиционирование */
+
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -100px; /* Отступ слева */
+    margin-top: -80px;	/* Отступ сверху */
+
+   }
+   
+.err_win {
+    position: absolute; /* Абсолютное позиционирование */
+
+    left: 50%; /* Положение слоя от левого края   */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -176px; /* Отступ слева */
+    margin-top: -45px;	/* Отступ сверху */
+
+   }

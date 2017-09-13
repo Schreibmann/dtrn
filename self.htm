@@ -1,0 +1,35 @@
+
+<div style="position:absolute; top:5px; left:5px;  height: 335px; ">
+	<iframe id = "iframe1" name="iframe1"  scrolling="no" frameborder="0" width="525" height="335"></iframe>
+</div>
+
+<div style="position:absolute; top:345px; visibility:hidden;" id="settingsBtnDiv" class="wsize95pt">
+<button id="mon_settings" onclick="FramesNeedPassCheck()" class="LAlign ">Настройки</button>
+</div>
+
+<script type="text/javascript">
+	
+	var ret = set_URL();
+	if (ret) {setTimeout('showSettingsBtn()',1200);}
+	
+	persent = getCookie("prs");
+	
+	$('iframe[name=iframe1]').each(function(){
+	
+		$(this).addClass('frm');							
+		
+	}); 
+	
+	$("#wrap").children("div").each(function(){
+	
+									$(this).addClass('z' + persent.toString());
+									var left = Math.round($(this).offset().left/100*persent);
+									var top =  Math.round($(this).offset().top/100*persent);
+									$(this).css('left', left.toString() + "px");
+									$(this).css('top', top.toString() + "px");
+									if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {$(this).css('zoom','1');}
+									if (navigator.userAgent.toLowerCase().indexOf('safari') > -1) {$(this).css('zoom','1');}
+									});
+
+</script>
+

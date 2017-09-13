@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+<title>monitor</title>
+
+<script type="text/javascript" src="/js/settings.js"> </script>
+<script type="text/javascript" src="/js/cookie.js"> </script>
+<script type="text/javascript" src="/js/j182.js"> </script>
+
+<script type="text/javascript" src="/js/ajaxupload.js"> </script>
+
+<link rel="stylesheet" media="screen" href="/css/monitor.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" media="screen" href="/css/allcss.css" type="text/css" charset="utf-8">
+
+<script type="text/javascript">
+	var version = parseInt($.browser.version, 10);
+	$.browser.msie8 = $.browser.msie && (version < 10);
+	$.browser.msie9 = $.browser.msie && (version == 9);
+	$.browser.msie10 = $.browser.msie && (version == 10);
+	$.browser.noPersent = $.browser.msie8 || $.browser.msie9 || ($.browser.opera && (version < 15));
+	
+	var ret = readSettings();
+	if(ret)
+	{
+		setGrid();
+	}
+
+</script>
+
+<link rel="shortcut icon" href="/favicon.ico">
+<link type="image/x-icon" rel="icon" href="/favicon.ico">
+<link type="image/x-icon" rel="shortcut icon" href="/favicon.ico">
+
+
+</head>
+
+<body>
+
+
+<div id="wrap"></div>
+
+
+
+</body>
+</html>

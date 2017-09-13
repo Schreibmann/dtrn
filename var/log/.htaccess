@@ -1,0 +1,8 @@
+<FilesMatch "\.(?i:log)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch> 
+<FilesMatch "\.(?i:bak)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch> 

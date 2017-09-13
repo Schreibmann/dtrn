@@ -1,0 +1,123 @@
+<div id="settingsWin" class=" popupwin radiusBorder_" style="position: absolute; height: 250px; width: 470px; left: 12px; ">
+<div>
+<form id="gridForm" action="">
+
+<a class="">Количество фреймов:</a>
+<a><input type="radio" id="self" name="grid" value="self">1x1</a>
+<a><input type="radio" id="2x2" name="grid" value="2x2">2x2</a>
+<a><input type="radio" id="3x2" name="grid" value="3x2">3x2</a>
+<a><input type="radio" id="4x3" name="grid" value="4x3">4x3</a>
+<hr>
+<div id="pers_div">
+<a class="">Масштаб:</a>
+<a><input type="radio" id="50" name="scale" value="50">50%</a>
+<a><input type="radio" id="66" name="scale" value="66">66%</a>
+<a><input type="radio" id="76" name="scale" value="76">76%</a>
+<a><input type="radio" id="84" name="scale" value="84">84%</a>
+<a><input type="radio" id="100" name="scale" value="100">100%</a>
+<hr>
+</div>
+<p class="title">IP адреса фреймов: [Без "http://"! Пример: "192.168.1.2","self"]</p>
+<input type="edit" id="frame_1_ip" name="frame_1_ip"  class="wsize24pt">
+<input type="edit" id="frame_2_ip" name="frame_2_ip"  class="wsize24pt">
+<input type="edit" id="frame_3_ip" name="frame_3_ip"  class="wsize24pt">
+<input type="edit" id="frame_4_ip" name="frame_4_ip"  class="wsize24pt">
+<input type="edit" id="frame_5_ip" name="frame_5_ip"  class="wsize24pt">
+<input type="edit" id="frame_6_ip" name="frame_6_ip"  class="wsize24pt">
+<input type="edit" id="frame_7_ip" name="frame_7_ip"  class="wsize24pt">
+<input type="edit" id="frame_8_ip" name="frame_8_ip"  class="wsize24pt">
+<input type="edit" id="frame_9_ip" name="frame_9_ip"  class="wsize24pt">
+<input type="edit" id="frame_10_ip" name="frame_10_ip"  class="wsize24pt">
+<input type="edit" id="frame_11_ip" name="frame_11_ip"  class="wsize24pt">
+<input type="edit" id="frame_12_ip" name="frame_12_ip"  class="wsize24pt">
+</div>
+
+<div class="lAlign wsize100pt">
+	<button type="button" onclick="changeSettings()" class="alarm rAlign wsize45pt">Сохранить</button>
+	<button type="button" onclick="showMonSettings('close')" class="alarm lAlign wsize45pt">Закрыть</button>
+</div>
+
+</form>
+</div>
+<script type="text/javascript">
+if  ($.browser.noPersent) { 	
+	$('#pers_div').css('visibility', 'hidden');
+}
+
+$('input').live('click',function()
+	{
+
+		switch (this.id)
+		{
+		
+			case "self":
+			{
+				$('#frame_1_ip').css('visibility','visible');
+				$('#frame_2_ip').css('visibility','hidden');
+				$('#frame_3_ip').css('visibility','hidden');
+				$('#frame_4_ip').css('visibility','hidden');
+				$('#frame_5_ip').css('visibility','hidden');
+				$('#frame_6_ip').css('visibility','hidden');
+				$('#frame_7_ip').css('visibility','hidden');
+				$('#frame_8_ip').css('visibility','hidden');
+				$('#frame_9_ip').css('visibility','hidden');
+				$('#frame_10_ip').css('visibility','hidden');
+				$('#frame_11_ip').css('visibility','hidden');
+				$('#frame_12_ip').css('visibility','hidden');
+				break;
+			}
+		
+			case "2x2":
+			{
+				$('#frame_1_ip').css('visibility','visible');
+				$('#frame_2_ip').css('visibility','visible');
+				$('#frame_3_ip').css('visibility','hidden');
+				$('#frame_4_ip').css('visibility','hidden');
+				$('#frame_5_ip').css('visibility','visible');
+				$('#frame_6_ip').css('visibility','visible');
+				$('#frame_7_ip').css('visibility','hidden');
+				$('#frame_8_ip').css('visibility','hidden');
+				$('#frame_9_ip').css('visibility','hidden');
+				$('#frame_10_ip').css('visibility','hidden');
+				$('#frame_11_ip').css('visibility','hidden');
+				$('#frame_12_ip').css('visibility','hidden');
+				break;
+			}
+			case "3x2":
+			{
+				$('#frame_1_ip').css('visibility','visible');
+				$('#frame_2_ip').css('visibility','visible');
+				$('#frame_3_ip').css('visibility','visible');
+				$('#frame_4_ip').css('visibility','hidden');
+				$('#frame_5_ip').css('visibility','visible');
+				$('#frame_6_ip').css('visibility','visible');
+				$('#frame_7_ip').css('visibility','visible');
+				$('#frame_8_ip').css('visibility','hidden');
+				$('#frame_9_ip').css('visibility','hidden');
+				$('#frame_10_ip').css('visibility','hidden');
+				$('#frame_11_ip').css('visibility','hidden');
+				$('#frame_12_ip').css('visibility','hidden');
+				break;
+			}
+			case "4x3":
+			{
+				$('#frame_1_ip').css('visibility','visible');
+				$('#frame_2_ip').css('visibility','visible');
+				$('#frame_3_ip').css('visibility','visible');
+				$('#frame_4_ip').css('visibility','visible');
+				$('#frame_5_ip').css('visibility','visible');
+				$('#frame_6_ip').css('visibility','visible');
+				$('#frame_7_ip').css('visibility','visible');
+				$('#frame_8_ip').css('visibility','visible');
+				$('#frame_9_ip').css('visibility','visible');
+				$('#frame_10_ip').css('visibility','visible');
+				$('#frame_11_ip').css('visibility','visible');
+				$('#frame_12_ip').css('visibility','visible');
+				break;
+			}
+		}
+	});
+	
+	setMonSettings();
+	
+</script>
